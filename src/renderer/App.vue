@@ -1,13 +1,14 @@
 <template>
   <div id="app-vue">
     <div id="toolbar">
-
+      <toolbar></toolbar>
     </div>
     <div id="sidebar">
-      <hr>
+      <sidebar></sidebar>
+      <hr v-on:clink="stretch">
     </div>
     <div id="editorbar">
-
+      <editorbar></editorbar>
     </div>
   </div>
 </template>
