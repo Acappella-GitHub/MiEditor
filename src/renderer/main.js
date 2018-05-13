@@ -5,9 +5,13 @@ import App from './App'
 import router from './router'
 import store from './store'
 
+import {Icon, Button} from 'element-ui'
+
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.http = Vue.prototype.$http = axios
 Vue.config.productionTip = false
+Vue.use(Icon)
+Vue.use(Button)
 
 /* eslint-disable no-new */
 new Vue({

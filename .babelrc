@@ -35,5 +35,5 @@
       ]
     }
   },
-  "plugins": ["transform-runtime"]
+  "plugins": ["transform-runtime",["component",{"libraryName": "element-ui","libDir": "lib","styleLibraryName": "theme-chalk"}]]
 }

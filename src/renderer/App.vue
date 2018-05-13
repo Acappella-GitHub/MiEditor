@@ -3,19 +3,33 @@
     <div id="toolbar">
       <toolbar></toolbar>
     </div>
+
     <div id="sidebar">
-      <sidebar></sidebar>
+      <filemanager></filemanager>
       <hr v-on:clink="stretch">
     </div>
+
     <div id="editorbar">
-      <editorbar></editorbar>
+      <div id="codebar">
+
+      </div>
+      <div id="shellbar">
+        <hr>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+  import toolbar from './components/ToolBar/ToolBar'
+  import filemanager from './components/SideBar/FileManager'
+
   export default {
-    name: 'app-vue'
+    name: 'app-vue',
+    components: {
+      toolbar,
+      filemanager
+    }
   }
 </script>
 
@@ -29,16 +43,15 @@
 
   #sidebar {
     position: absolute;
-    top: 0;
     left: 60px;
     width: 290px;
     height: 100%;
     background: #222;
+    overflow: hidden;
   }
 
   #editorbar {
     position: absolute;
-    top: 0;
     left: 350px;
     right: 0;
     height: 100%;
@@ -51,6 +64,27 @@
     margin: 0;
     width: 2px;
     height: 100%;
+    background: #555;
+    border: none;
+  }
+
+  #codebar {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+  }
+
+  #shellbar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+  }
+
+  #shellbar hr {
+    margin: 0;
+    width: 100%;
+    height: 2px;
     background: #555;
     border: none;
   }
