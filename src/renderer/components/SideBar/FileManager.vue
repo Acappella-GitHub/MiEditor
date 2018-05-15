@@ -2,16 +2,11 @@
   <div id="file-manager-vue">
     <h1>文件管理器</h1>
     <el-button id="open-file-button" type="primary" size="small">打开文件/文件夹</el-button>
-    <div id="test">
-      <el-button icon="el-icon-plus" size="mini" circle></el-button>
-      <el-button icon="el-icon-refresh" size="mini" circle></el-button>
+    <div id="file-tool">
+      <i id="add-file" class="el-icon-plus"></i>
+      <i id="refresh-file" class="el-icon-refresh"></i>
     </div>
     <div id="file-list">
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
     </div>
   </div>
 </template>
@@ -22,22 +17,22 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   #file-manager-vue {
     position: absolute;
     width: 100%;
     height: 100%;
     text-align: center;
-  }
 
-  #file-manager-vue h1 {
-    margin: 0;
-    height: 32px;
-    font-size: 15px;
-    font-weight: lighter;
-    line-height: 36px;
-    color: #DDD;
-    background: #444;
+    h1 {
+      margin: 0;
+      height: 32px;
+      font-size: 15px;
+      font-weight: lighter;
+      line-height: 36px;
+      color: #CCC;
+      background: #444;
+    }
   }
 
   #open-file-button {
@@ -46,10 +41,24 @@
     border-radius: 0;
   }
 
-  #test {
+  #file-tool {
     width: 100%;
     height: 32px;
+    font-size: 0;
+    text-align: right;
+    line-height: 46px;
     background: #444;
+  }
+
+  #add-file,#refresh-file {
+    margin: 0 12px 0 0;
+    font-size: 20px;
+    color: #CCC;
+  }
+
+  #add-file:hover,#refresh-file:hover {
+    color: #FFF;
+    cursor: pointer;
   }
 
   #file-list {

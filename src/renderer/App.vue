@@ -15,6 +15,9 @@
       </div>
       <div id="shellbar">
         <hr>
+        <div id="shellbar-tab">
+          <a id="console-tab">控制台</a><a id="console-tab">控制台</a>
+        </div>
       </div>
     </div>
   </div>
@@ -33,7 +36,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   #toolbar {
     position: absolute;
     width: 60px;
@@ -87,5 +90,19 @@
     height: 2px;
     background: #555;
     border: none;
+  }
+
+  #shellbar-tab {
+    width: 100%;
+    height: 25px;
+    background: #444;
+
+    a {
+      display: inline-block;
+      padding: 5px;
+      font-size: 14px;
+      color: #BBB;
+      background: #111;
+    }
   }
 </style>
